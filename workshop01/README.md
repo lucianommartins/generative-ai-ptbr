@@ -1,20 +1,19 @@
-# Generative AI - Linguagem
+# Workshop 01: Prototipando aplicações com Generative AI
 
-Bem vindo ao repositório de exemplos de linguagem para [Generative AI](https://cloud.google.com/ai/generative-ai/) na Vertex AI.
+Bem vindo ao workshop de prototipação de aplicações com [Generative AI](https://cloud.google.com/ai/generative-ai/) na Vertex AI.
 
 ## Estrutura de diretórios
 
 ```
-generative-ai/
-├── language/
+workshop01/
+├── linguagem/
     ├── exemplos/             
         ├── document-summarization/  - examplos de sumarização de documentos
         ├── prompt-design/           - examplos de criação de prompts
 ```
 
 ## Conteúdo
-- [dialogflow-cx/](dialogflow-cx/)
-- [Language/](language/)
+- [Linguagem/](linguagem/)
   - [Getting Started with Generative AI Studio without code](language/intro_generative_ai_studio.md)
   - [Intro to Vertex AI PaLM API](language/intro_palm_api.ipynb)
   - [Intro to Prompt Design](language/intro_prompt_design.ipynb)

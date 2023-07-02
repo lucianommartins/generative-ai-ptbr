@@ -13,6 +13,7 @@ innovators-hive-saopaulo-2023/
         ├── exemplos/             
             ├── document-summarization/  - exemplos de doc summarização
             └── prompt-design/           - exemplos de prompts
+├── workshop03/
 └── setup-env/                           - instruções de setup
 ```
 
