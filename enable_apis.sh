@@ -1,3 +1,4 @@
+gcloud services enable bigquery.googleapis.com
 gcloud services enable cloudbuild.googleapis.com
 gcloud services enable cloudfunctions.googleapis.com
 gcloud services enable dialogflow.googleapis.com
