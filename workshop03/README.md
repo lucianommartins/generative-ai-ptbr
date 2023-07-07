@@ -109,7 +109,7 @@ Para testar a resposta atualizada:
 
 ![teste bot](imgs/08_teste_bot.png)
 
-## Página "Localizção da loja"
+## Página "Localização da loja"
 
 Uma conversa do Dialogflow CX pode ser descrita e visualizada como uma [máquina de estado](https://en.wikipedia.org/wiki/Finite-state_machine). Os estados de uma sessão do CX são representados por [pages (páginas)](https://cloud.google.com/dialogflow/cx/docs/concept/page?hl=pt-br). Até agora, você tem apenas uma página, então o agente não é muito útil. Nesta seção, você criará outra página que processa perguntas sobre o local da loja.
 
@@ -146,11 +146,11 @@ Agora, criaremos uma nova **page** (página). Adicione um _fulfillment de entrad
 5. Clique no botão de opções (três pontos verticais ao lado do nome) ao lado do nome de exibição da página.
 6. Selecione **Edit** para abrir o painel de edição de página.
 7. Encontre o **Entry fulfillment** e clique em **Edit fulfillment**.
-8. Digite `A nossa loja está localizada na Avenida Brigadeiro Faria Lima, número 3477, São Paulo.` no campo **Agent says **(fala do agente). 
+8. Digite `A nossa loja está localizada na Avenida Brigadeiro Faria Lima, número 3477, São Paulo.` no campo **Agent says** (fala do agente). 
 9. Clique em **Save**.
 10. Feche o painel de edição da página.
 
-![frases de treinamento](imgs/10_training_phrases.png)
+![frases de treinamento](imgs/pagina_localizacao_loja.png)
 
 ### Adicionar uma rota de intent de localização ao fluxo
 
@@ -325,70 +325,11 @@ Quando um usuário final fornece parâmetros de intent para uma correspondência
 
 Para a página do novo pedido, você precisa definir dois parâmetros de formulário obrigatórios:
 
-<table>
-  <tr>
-   <td>Obrigatório
-   </td>
-   <td>Nome de exibição
-   </td>
-   <td>Tipo de entidade
-   </td>
-   <td>É uma lista
-   </td>
-   <td>Prompt
-   </td>
-  </tr>
-  <tr>
-   <td>
+![parâmetros de tamanho](imgs/23_novopedido.png)
 
-<img src="imgs/23_novopedido.png" width="" alt="alt_text" title="novo pedido">
+![parâmetros de tamanho](imgs/detalhes_parametros.png)
 
-   </td>
-   <td>cor
-   </td>
-   <td>@sys.color
-   </td>
-   <td>
-
-<img src="imgs/24_parametros.png" width="" alt="alt_text" title="parametros do pedido">
-       
-   </td>
-   <td>Qual cor você quer?
-   </td>
-  </tr>
-  <tr>
-   <td>
-
-<img src="imgs/25_bot.png" width="" alt="alt_text" title="visão do bot">
-
-   </td>
-   <td>tamanho
-   </td>
-   <td>@size
-   </td>
-   <td>
-
-<img src="imgs/26_endsession.png" width="" alt="alt_text" title="fim da sessão">
-
-   </td>
-   <td>Que tamanho você quer?
-   </td>
-  </tr>
-</table>
-
-Para adicionar esse formulário, siga estas etapas:
-
-1. Clique na página **New Order** no gráfico.
-2. Clique no botão **Parameters** para adicionar um botão +. O painel de edição de parâmetros é aberto.
-3. Adicione os parâmetros conforme descrito na tabela acima.
-4. Clique em **Save**.
-5. Feche o painel de edição de parâmetros.
-
-<p id="gdcalert27" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image27.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert28">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image27.png "image_tooltip")
-
+![parâmetros de tamanho](imgs/24_parametros.png)
 
 
 ### Adicionar uma rota de intent de pedido ao fluxo
@@ -437,32 +378,16 @@ Adicione a seguinte rota à página de pedidos, que será chamada para cada fala
 * **Condição**: `true`
 * **Fala do agente**: `Eu gostaria de coletar só mais algumas informações.`
 
-
-### 
-
-<p id="gdcalert28" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image28.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert29">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image28.png "image_tooltip")
-
-
+![parâmetros de tamanho](imgs/25_bot.png)
 
 ### Criar uma rota de condição para finalizar a sessão.
 
 Adicione a seguinte rota de condição à página **Confirmar pedido** para encerrar a sessão assim que a página se tornar ativa e o fulfillment de entrada for processado:
 
-
-
 * **Condição**: `true`
 * **Destino da transição**: **Page**: `End Session`
 
-
-
-<p id="gdcalert29" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image29.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert30">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image29.png "image_tooltip")
-
+![parâmetros de tamanho](imgs/26_endsession.png)
 
 
 ### Testar o agente concluído
