@@ -8,14 +8,12 @@ Para maiores informações, configura [a página oficial do evento](https://clou
 
 ```
 innovators-hive-saopaulo-2023/
-├── workshop01/
-    ├── linguagem/
-        ├── exemplos/             
-            ├── document-summarization/  - exemplos de doc summarização
-            └── prompt-design/           - exemplos de prompts
-├── workshop02/
-├── workshop03/
-└── setup-env/                           - instruções de setup
+├── linguagem/
+   ├── document-summarization/  - exemplos de doc summarização
+   └── prompt-design/           - exemplos de prompts
+├── bigquery/                   - exemplos de uso com código e BigQuery
+├── dialogflow/                 - exemplos de uso com chatbots/Dialogflow
+└── setup-env/                  - instruções de setup
 ```
 
 ## Configurando um projeto na Google Cloud
