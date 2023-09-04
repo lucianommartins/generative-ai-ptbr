@@ -1,5 +1,4 @@
 import os
-from google.cloud import translate
 from vertexai.preview.language_models import ChatModel
 from flask import Flask, request, make_response, jsonify
 
@@ -9,19 +8,6 @@ app = Flask(__name__)
 # variaveis do ambiente de teste
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = './creds.json' # TODO: gerar credenciais
 parent='projects/' #TODO adicionar project id
-
-
-# função de tradução dos prompts
-def traduza(texto, idioma_destino):
-    client = translate.TranslationServiceClient()
-
-    response = client.translate_text(
-        parent=parent,
-        contents=[texto],
-        target_language_code=idioma_destino,
-    )
-
-    return response.translations[0].translated_text
 
 
 # rota default
@@ -51,13 +37,8 @@ def palmWrapper():
         'Gere uma resposta curta e sem bullets.\n'
 
     prompt=contexto+texto
-    prompt=traduza(texto=prompt, idioma_destino='en')
-
     resposta = chat.send_message(prompt)
-
-    resposta = traduza(resposta.text, 'pt')
-
-    resposta = {"fulfillment_response": {"messages": [{"text": {"text": [resposta]}}], "merge_behavior": "REPLACE"}}
+    resposta = {"fulfillment_response": {"messages": [{"text": {"text": [resposta.text]}}], "merge_behavior": "REPLACE"}}
     return resposta
 
 if __name__ == "__main__":
