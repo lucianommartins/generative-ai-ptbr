@@ -9,7 +9,7 @@ Envie recursos adicionais por meio de um PR.
 # Produtos
 - Suporte a Generative AI na Vertex AI ([Your Guide](https://cloud.google.com/blog/products/ai-machine-learning/vertex-ai-model-garden-and-generative-ai-studio), [Demo](https://youtube.com/watch?v=pN-RTBq6i3I))
   - [Vertex AI](https://cloud.google.com/vertex-ai)
-  - [Generative AI Studio](https://cloud.google.com/generative-ai-studio) 
+  - [Vertex AI AI Studio](https://cloud.google.com/generative-ai-studio) 
   - Duet AI para Google Cloud ([Blog](https://cloud.google.com/blog/products/application-modernization/introducing-duet-ai-for-google-cloud), [Video](https://www.youtube.com/watch?v=g5TwQx60NXs))
    
 # Vídeos

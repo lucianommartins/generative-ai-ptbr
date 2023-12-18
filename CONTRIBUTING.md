@@ -1,84 +1,85 @@
-# How to Contribute
+# Como contribuir
 
-We'd love to accept your patches and contributions to this project. There are
-just a few small guidelines you need to follow.
+Adoraríamos aceitar seus patches e contribuições para este projeto. Há
+apenas algumas pequenas diretrizes que você precisa seguir.
 
 ## Contributor License Agreement
 
-Contributions to this project must be accompanied by a Contributor License
-Agreement. You (or your employer) retain the copyright to your contribution;
-this simply gives us permission to use and redistribute your contributions as
-part of the project. Head over to <https://cla.developers.google.com/> to see
-your current agreements on file or to sign a new one.
+As contribuições para este projeto devem ser acompanhadas de uma Contributor License Agreement. 
+Você (ou seu empregador) retém os direitos autorais de sua contribuição;
+isso simplesmente nos dá permissão para usar e redistribuir suas contribuições como
+parte do projeto. Acesse <https://cla.developers.google.com/> para ver
+seus acordos atuais arquivados ou assinar um novo.
 
-You generally only need to submit a CLA once, so if you've already submitted one
-(even if it was for a different project), you probably don't need to do it
-again.
+Geralmente, você só precisa enviar um CLA uma vez, portanto, se já tiver enviado um
+(mesmo que seja para um projeto diferente), você provavelmente não precisará fazer isso
+de novo.
 
-## Code Quality Checks
+## Checagens de qualidade de código
 
-All notebooks in this project are checked for formatting and style, to ensure a
-consistent experience. To test notebooks prior to submitting a pull request,
-you can follow these steps.
+Todos os notebooks neste projeto são verificados quanto à formatação e estilo, para garantir uma
+experiência consistente. Para testar notebooks antes de enviar uma solicitação pull,
+você pode seguir estas etapas.
 
-From a command-line terminal (e.g. from Vertex Workbench or locally), install
-the code analysis tools:
+Em um terminal de linha de comando (por exemplo, do Vertex Workbench ou localmente), instale
+as ferramentas de análise de código:
 
 ```shell
 pip3 install --user -U nbqa black flake8 isort pyupgrade git+https://github.com/tensorflow/docs
 ```
 
-You'll likely need to add the directory where these were installed to your PATH:
+Você terá que incluir o diretório onde a ferramenta foi instalada em seu PATH:
 
 ```shell
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
-Then, set an environment variable for your notebook (or directory):
+Defina uma variável com a localização de seu notebook a ser avaliado:
 
 ```shell
 export notebook="your-notebook.ipynb"
 ```
 
-Finally, run this code block to check for errors. Each step will attempt to
-automatically fix any issues. If the fixes can't be performed automatically,
-then you will need to manually address them before submitting your PR.
-
-Note: For official, only submit one notebook per PR.
+Finalmente, execute este bloco de código para verificar se há erros. Cada etapa tentará
+corrija automaticamente quaisquer problemas. Se as correções não puderem ser executadas automaticamente,
+então você precisará abordá-los manualmente antes de enviar seu PR.
 
 ```shell
 docker run -v ${PWD}:/setup/app gcr.io/cloud-devrel-public-resources/notebook_linter:latest your_notebook
 ```
 
-## Code Reviews
+Nota: Apenas submeta um notebook por PR.
 
-All submissions, including submissions by project members, require review. We
-use GitHub pull requests for this purpose. Consult
-[GitHub Help](https://help.github.com/articles/about-pull-requests/) for more
-information on using pull requests.
 
-## Community Guidelines
+## Revisão de código
 
-This project follows [Google's Open Source Community
-Guidelines](https:git//opensource.google/conduct/).
+Todos os envios, incluindo os envios de membros do projeto, exigem revisão. Nós
+usamos *pull requests* do GitHub para essa finalidade. Consulte a
+[Ajuda do GitHub](https://help.github.com/articles/about-pull-requests/) para mais
+informações sobre o uso de *pull requests*.
 
-## Contributor Guide
+## Guia de Comunidade
 
-If you are new to contributing to open source, you can find helpful information in this contributor guide. 
+Este projeto segue [as diretrizes de Open Source Community
+do Google](https:git//opensource.google/conduct/).
 
-You may follow these steps to contribute:
+## Guia do contribuidor
 
-1. <b>Fork the official repository.</b> This will create a copy of the official repository in your own account.
-2. <b>Sync the branches.</b> This will ensure that your copy of the repository is up-to-date with the latest changes from the official repository.
-3. <b>Work on your forked repository's dev branch.</b> This is where you will make your changes to the code.
-4. <b>Commit your updates on your forked repository's dev branch.</b> This will save your changes to your copy of the repository.
-5. <b>Submit a pull request to the official repository's dev branch.</b> This will request that your changes be merged into the official repository.
+Se você é novo na contribuição para código aberto, poderá encontrar informações úteis neste guia do contribuidor.
+
+Você pode seguir estas etapas para contribuir:
+
+1. <b>Fork do repositório oficial.</b> Isso criará uma cópia do repositório oficial em sua própria conta.
+2. <b>Sincronize as branches.</b> Isso garantirá que sua cópia do repositório esteja atualizada com as últimas alterações do repositório oficial.
+3. <b>Trabalhe no branch dev do seu fork local.</b> É aqui que você fará as alterações no código.
+4. <b>Commite suas atualizações no branch de dev do seu fork local.</b> Isso salvará suas alterações em sua cópia do repositório.
+5. <b>Envie uma solicitação pull para o branch de dev do repositório oficial.</b> Isso solicitará que suas alterações sejam mescladas no repositório oficial.
 
 ![image](https://storage.googleapis.com/github-repo/img/contributing/contributor-guide-diagram.jpg)
 
-Here are some additional things to keep in mind during the process:
+Aqui estão algumas coisas adicionais que você deve ter em mente durante o processo:
 
-- <b>Read the [Google's Open Source Community
-Guidelines](https://opensource.google/conduct/).</b> The contribution guidelines will provide you with more information about the project and how to contribute.
-- <b>Test your changes.</b> Before you submit a pull request, make sure that your changes work as expected.
-- <b>Be patient.</b> It may take some time for your pull request to be reviewed and merged.
+- <b>Leia [as diretrizes de Open Source Community
+do Google](https:git//opensource.google/conduct/).</b> As diretrizes de contribuição fornecerão mais informações sobre o projeto e como contribuir.
+- <b>Teste suas alterações.</b> Antes de enviar uma solicitação pull, certifique-se de que suas alterações funcionem conforme o esperado.
+- <b>Seja paciente.</b> Pode levar algum tempo para que sua solicitação pull seja revisada e mesclada.

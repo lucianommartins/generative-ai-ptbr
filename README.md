@@ -1,19 +1,34 @@
-# Innovators Hive São Paulo 2023
+# A jornada de Generative AI na Google Cloud com Vertex AI
 
-Este repositório contém os artefatos utilizados nos treinamentos práticos do Innovators Hive São Paulo 2023.
+Bem vindo ao repositório com exemplos e cenários de [Generative AI](https://cloud.google.com/ai/generative-ai) na Google Cloud.
 
-Para maiores informações, configura [a página oficial do evento](https://cloudonair.withgoogle.com/events/summit-sao-paulo-2023).
+<a href="gemini"><img src="https://lh3.googleusercontent.com/eDr6pYKs1tT0iK0nt3pPhvVlP2Wn96fbGqbWgBAARRZ7isej037g_tWobjV8zQkxOsWzJuEH8p-fksczXUOeqxGZZIo_HUCdkn8q-a4fuwATD7Q9Xrs=w2456-l100-sg-rj-c0xffffff" style="width:35em"></a>
+
+Aqui você encontrará notebooks, exemplos de códigos e aplicações de exemplo que demonstrarão como utilizar, desenvolver e gerenciar fluxos de [IA Generativa na Google Cloud](https://cloud.google.com/ai/generative-ai), utilizando a plataforma [Vertex AI](https://cloud.google.com/vertex-ai).
+
+Para mais exemplos de utilização da Vertex AI, visite o repositório oficial [Vertex AI samples](https://github.com/GoogleCloudPlatform/vertex-ai-samples/).
 
 ## Estrutura de Diretórios
 
 ```
-innovators-hive-saopaulo-2023/
-├── linguagem/
-   ├── document-summarization/  - exemplos de doc summarização
-   └── prompt-design/           - exemplos de prompts
-├── bigquery/                   - exemplos de uso com código e BigQuery
-├── dialogflow/                 - exemplos de uso com chatbots/Dialogflow
-└── setup-env/                  - instruções de setup
+generative-ai-ptbr/
+├── gemini/                                     - exemplos com o modelo Gemini
+   ├── 01.introducao/                           - notebooks de introdução ao uso do modelo
+   ├── 02.usecases/                             - exemplos de casos de uso para indústrias
+      ├── 2.1-retail/                           - utilizando o Gemini em cenários de varejo 
+      ├── 2.2-education/                        - utilizando o Gemini em cenários de educação
+      ├── 2.3-retrieval-augmented-generation/   - cenários de RAG com o Gemini
+   ├── 03.function-calling/                     - utilizando funções externas com o Gemini
+   ├── 04.responsible-ai/                       - exemplos de análise de vieses
+   ├── 05.chatbot/
+├── palm2/                                      - exemplos com o modelo PaLM2 
+   ├── 01.introducao/                           - notebooks de introdução ao uso do modelo
+   ├── 02.linguagem/                            - exemplos utilizando linguagem natural
+      ├── 2.1-prompt-design/                    - cenários de prompt design (como extração de informações, Q&A, etc) 
+      ├── 2.2-document-summarization/           - cenários de sumarização de texto
+   ├── 03.geração_codigo/                       - exemplos utilizando geração de código
+   ├── 04.chatbot/                              - exemplo de um chatbot que utiliza as API do PaLM2
+└── setup-env/     
 ```
 
 ## Configurando um projeto na Google Cloud
