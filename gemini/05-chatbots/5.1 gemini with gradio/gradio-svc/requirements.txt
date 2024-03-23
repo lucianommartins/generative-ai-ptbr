@@ -1,0 +1,3 @@
+gradio
+Pillow
+google-cloud-aiplatform
